@@ -1,11 +1,11 @@
 type EstablishmentInput = {
-    establishmentId: string;
+    establishmentId?: number | undefined;
     establishmentName: string;
     establishmentUserId: string;
 };
 
 export class EstablishmentEnt {
-    private readonly _establishmentId: string;
+    private readonly _establishmentId: number | undefined;
     private _establishmentName: string;
     private readonly _establishmentUserId: string;
 
@@ -27,7 +27,7 @@ export class EstablishmentEnt {
     }
 
     // Getters:
-    getEstablishmentId(): string {
+    getEstablishmentId(): number | undefined {
         return this._establishmentId;
     }
 

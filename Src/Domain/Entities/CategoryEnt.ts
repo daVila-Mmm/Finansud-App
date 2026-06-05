@@ -1,11 +1,11 @@
 type CategoryInput = {
-    categoryId: string;
+    categoryId?: number | undefined;
     categoryName: string;
     categoryUserId: string;
 }
 
 export class CategoryEnt {
-    private readonly _categoryId: string;
+    private readonly _categoryId: number | undefined;
     private _categoryName: string;
     private readonly _categoryUserId: string;
 
@@ -28,7 +28,7 @@ export class CategoryEnt {
     }
 
     // Getters:
-    getCategoryId(): string {
+    getCategoryId(): number | undefined {
         return this._categoryId;
     }
 
